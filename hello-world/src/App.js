@@ -6,9 +6,11 @@ import Welcome from './components/Welcome';
 function App() {
   return (
     <div className="App">
-      <Greet name="Aditya" />
-      <Greet name="Ronit" />
-      <Greet name="Chiku" />
+      <Greet name="Aditya" heroName="IronMan">
+        <p>This is children props</p>
+      </Greet>
+      <Greet name="Ronit" heroName="Batman" />
+      <Greet name="Chiku" heroName="Superman" />
       <Welcome />
     </div>
   );
