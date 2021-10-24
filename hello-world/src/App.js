@@ -9,9 +9,19 @@ function App() {
       <Greet name="Aditya" heroName="IronMan">
         <p>This is children props</p>
       </Greet>
-      <Greet name="Ronit" heroName="Batman" />
+      <Greet name="Ronit" heroName="Batman">
+        <button>Action</button>
+      </Greet>
       <Greet name="Chiku" heroName="Superman" />
-      <Welcome />
+      <hr />
+      <Welcome name="Aditya" heroName="IronMan">
+        <button>Hello</button>
+        <p>Bye</p>
+      </Welcome>
+      <Welcome name="Ronit" heroName="Batman">
+        <input type="date" />
+      </Welcome>
+      <Welcome name="Chiku" heroName="Superman" />
     </div>
   );
 }
