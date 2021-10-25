@@ -6,17 +6,19 @@ import Message from "./components/Message";
 import Counter from "./components/Counter";
 import FunctionClick from "./components/FunctionClick";
 import ClassClick from "./components/ClassClick";
+import EventBind from "./components/EventBind";
 
 function App() {
   return (
     <div className="App">
-      <FunctionClick />
+      <EventBind />
+      {/* <FunctionClick />
       <ClassClick />
       <Message />
       <Counter />
       <Greet name="Aditya" heroName="IronMan">
         <p>This is children props</p>
-      </Greet>
+      </Greet> */}
       {/* <Greet name="Ronit" heroName="Batman">
         <button>Action</button>
       </Greet>
@@ -27,9 +29,9 @@ function App() {
         <p>Bye</p>
       </Welcome>
       <Welcome name="Chiku" heroName="Superman" /> */}
-      <Welcome name="Ronit" heroName="Batman">
+      {/* <Welcome name="Ronit" heroName="Batman">
         <input type="date" />
-      </Welcome>
+      </Welcome> */}
     </div>
   );
 }
