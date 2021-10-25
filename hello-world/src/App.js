@@ -10,10 +10,10 @@ function App() {
     <div className="App">
       <Message />
       <Counter />
-      {/* <Greet name="Aditya" heroName="IronMan">
+      <Greet name="Aditya" heroName="IronMan">
         <p>This is children props</p>
       </Greet>
-      <Greet name="Ronit" heroName="Batman">
+      {/* <Greet name="Ronit" heroName="Batman">
         <button>Action</button>
       </Greet>
       <Greet name="Chiku" heroName="Superman" />
@@ -22,10 +22,10 @@ function App() {
         <button>Hello</button>
         <p>Bye</p>
       </Welcome>
+      <Welcome name="Chiku" heroName="Superman" /> */}
       <Welcome name="Ronit" heroName="Batman">
         <input type="date" />
       </Welcome>
-      <Welcome name="Chiku" heroName="Superman" /> */}
     </div>
   );
 }
