@@ -22,7 +22,8 @@ class RefsDemo extends Component {
     }
     
     handleClick = () => {
-        alert(this.inputRef.current.value);
+        // alert(this.inputRef.current.value);
+        alert(this.cbRef.value);
     }
 
     render() {
