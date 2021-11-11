@@ -1,10 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import ComponentF from "./ComponentF";
+import UserContext from "./userContext";
 
 class ComponentE extends Component {
     render() {
-        return <ComponentF />
+        return (
+            <div>
+                Component E context {this.context}
+                <ComponentF />
+            </div>
+        );
     }
 }
 
-export default ComponentE
+ComponentE.contextType = UserContext;
+
+export default ComponentE;
