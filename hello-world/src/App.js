@@ -19,7 +19,7 @@ import LifecycleA from "./components/LifecycleA";
 import FragmentDemo from "./components/FragmentDemo";
 import Table from "./components/Table";
 import PureComp from "./components/PureComp";
-import ParentComp from "./components/ParentComp"
+import ParentComp from "./components/ParentComp";
 import RefsDemo from "./components/RefsDemo";
 import FocusInput from "./components/FocusInput";
 import FRParentInput from "./components/FRParentInput";
@@ -31,15 +31,33 @@ import HoverCounter from "./components/HoverCounter";
 import ClickCounterTwo from "./components/ClickCounterTwo";
 import HoverCounterTwo from "./components/HoverCounterTwo";
 import User from "./components/User";
+import CounterTwo from "./components/CounterTwo";
 
 function App() {
-  return (
-    <div className="App">
-      <ClickCounterTwo />
+    return (
+        <div className="App">
+            <CounterTwo>
+                {(count, incrementCount) => (
+                    <ClickCounterTwo
+                        count={count}
+                        incrementCount={incrementCount}
+                    />
+                )}
+            </CounterTwo>
+            <CounterTwo>
+                {(count, incrementCount) => (
+                    <HoverCounterTwo
+                        count={count}
+                        incrementCount={incrementCount}
+                    />
+                )}
+            </CounterTwo>
+            {/* <ClickCounterTwo />
       <HoverCounterTwo />
-      {/* <ClickCounter name="Aditya" /> */}
-      {/* <HoverCounter /> */}
-      {/* <ErrorBoundary>
+      <User render={ (isLoggedIn) => isLoggedIn ? "Aditya" : "Guest"} /> */}
+            {/* <ClickCounter name="Aditya" /> */}
+            {/* <HoverCounter /> */}
+            {/* <ErrorBoundary>
         <Hero heroName="Batman" />
       </ErrorBoundary>
       <ErrorBoundary>
@@ -48,32 +66,32 @@ function App() {
       <ErrorBoundary>
         <Hero heroName="Joker" />
       </ErrorBoundary> */}
-      {/* <PortalDemo /> */}
-      {/* <FRParentInput /> */}
-      {/* <FocusInput /> */}
-      {/* <RefsDemo /> */}
-      {/* <ParentComp /> */}
-      {/* <PureComp /> */}
-      {/* <Table /> */}
-      {/* <FragmentDemo /> */}
-      {/* <LifecycleA /> */}
-      {/* <Form /> */}
-      {/* <h1 className="error">Error</h1> */}
-      {/* <h1 className={styles.success}>Success</h1> */}
-      {/* <InlineStyle /> */}
-      {/* <Stylesheet primary={true} /> */}
-      {/* <NameList /> */}
-      {/* <UserGreeting /> */}
-      {/* <ParentComponent /> */}
-      {/* <EventBind /> */}
-      {/* <FunctionClick />
+            {/* <PortalDemo /> */}
+            {/* <FRParentInput /> */}
+            {/* <FocusInput /> */}
+            {/* <RefsDemo /> */}
+            {/* <ParentComp /> */}
+            {/* <PureComp /> */}
+            {/* <Table /> */}
+            {/* <FragmentDemo /> */}
+            {/* <LifecycleA /> */}
+            {/* <Form /> */}
+            {/* <h1 className="error">Error</h1> */}
+            {/* <h1 className={styles.success}>Success</h1> */}
+            {/* <InlineStyle /> */}
+            {/* <Stylesheet primary={true} /> */}
+            {/* <NameList /> */}
+            {/* <UserGreeting /> */}
+            {/* <ParentComponent /> */}
+            {/* <EventBind /> */}
+            {/* <FunctionClick />
       <ClassClick />
       <Message />
       <Counter />
       <Greet name="Aditya" heroName="IronMan">
         <p>This is children props</p>
       </Greet> */}
-      {/* <Greet name="Ronit" heroName="Batman">
+            {/* <Greet name="Ronit" heroName="Batman">
         <button>Action</button>
       </Greet>
       <Greet name="Chiku" heroName="Superman" />
@@ -83,11 +101,11 @@ function App() {
         <p>Bye</p>
       </Welcome>
       <Welcome name="Chiku" heroName="Superman" /> */}
-      {/* <Welcome name="Ronit" heroName="Batman">
+            {/* <Welcome name="Ronit" heroName="Batman">
         <input type="date" />
       </Welcome> */}
-    </div>
-  );
+        </div>
+    );
 }
 
 export default App;
