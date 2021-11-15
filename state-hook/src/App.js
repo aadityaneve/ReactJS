@@ -15,13 +15,15 @@ import DataFetching from "./components/DataFetching";
 import React from "react";
 import ComponentC from "./components/ComponentC";
 import CounterOne from "./components/CounterOne";
+import CounterTwo from "./components/CounterTwo";
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
 function App() {
     return (
         <div className="App">
-          <CounterOne />
+          <CounterTwo />
+          {/* <CounterOne /> */}
             {/* <UserContext.Provider value={"Aditya"}>
               <ChannelContext.Provider value={"Neve"}>
                 <ComponentC />
