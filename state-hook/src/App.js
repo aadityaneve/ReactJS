@@ -21,6 +21,7 @@ import ComponentA1 from "./components/ComponentA1";
 import ComponentB1 from "./components/ComponentB1";
 import ComponentC1 from "./components/ComponentC1";
 import DataFetchingOne from "./components/DataFetchingOne";
+import DataFetchingTwo from "./components/DataFetchingTwo";
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -48,7 +49,8 @@ function App() {
         //     value={{ countState: count, countDispatch: dispatch }}
         // >
         <div className="App">
-          <DataFetchingOne />
+          <DataFetchingTwo />
+          {/* <DataFetchingOne /> */}
             {/* <h1>Count: {count} </h1>
                 <ComponentA1 />
                 <ComponentB1 />
