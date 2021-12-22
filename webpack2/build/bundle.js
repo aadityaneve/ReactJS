@@ -7,15 +7,26 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/images/webpack-logo.gif":
+/*!*************************************!*\
+  !*** ./src/images/webpack-logo.gif ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"webpack-logo.gif\");\n\n//# sourceURL=webpack://webpack2/./src/images/webpack-logo.gif?");
+
+/***/ }),
 
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.e(/*! import() */ \"src_index_css\").then(__webpack_require__.bind(__webpack_require__, /*! ./index.css */ \"./src/index.css\"));\r\n\r\n/* \r\nCreate a simple note taking web application with HTML/CSS/JS\r\nuser should be able take a simple note, and it should be seen on ui.\r\napplication should have a logo at top. import this logo in JS. bundle it through webpack\r\nBundle the other things like CSS, (fonts or icons if you have) with Webpack.\r\nfinal output should work with bundled code from build folder\r\n\r\n*/\r\n\r\nlet root = document.getElementById('root');\r\n\r\n    let mainDiv = document.createElement('div');\r\n    mainDiv.setAttribute('id', 'mainDiv');\r\n\r\n    let inputField = document.createElement('input');\r\n    inputField.setAttribute('id', 'inputField');\r\n\r\n    let label = document.createElement('label');\r\n    label.setAttribute('for', 'inputField');\r\n    label.innerText = 'Note: ';\r\n\r\n    let submitBtn = document.createElement('button');\r\n    submitBtn.innerText = 'SUBMIT';\r\n\r\n    let resetBtn = document.createElement('button');\r\n    resetBtn.innerText = 'RESET';\r\n\r\nmainDiv.append(label, inputField, submitBtn, resetBtn);\r\n\r\nlet notesDiv = document.createElement('div');\r\nnotesDiv.setAttribute('id', 'notesDiv');\r\n\r\nsubmitBtn.addEventListener('click', () => {\r\n    let note = document.createElement('h2');\r\n    note.innerText = inputField.value;\r\n\r\n    notesDiv.append(note);\r\n    inputField.value = null;\r\n    inputField.focus();\r\n});\r\n\r\nresetBtn.addEventListener('click', () => {\r\n    notesDiv.innerHTML = null;\r\n    inputField.value = null;\r\n    inputField.focus();\r\n});\r\n\r\nroot.append(mainDiv, notesDiv);\r\n\n\n//# sourceURL=webpack://webpack2/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _images_webpack_logo_gif__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/webpack-logo.gif */ \"./src/images/webpack-logo.gif\");\n\r\n__webpack_require__.e(/*! import() */ \"src_index_css\").then(__webpack_require__.bind(__webpack_require__, /*! ./index.css */ \"./src/index.css\"));\r\n\r\n/* \r\nCreate a simple note taking web application with HTML/CSS/JS\r\nuser should be able take a simple note, and it should be seen on ui.\r\napplication should have a logo at top. import this logo in JS. bundle it through webpack\r\nBundle the other things like CSS, (fonts or icons if you have) with Webpack.\r\nfinal output should work with bundled code from build folder\r\n\r\n*/\r\n\r\nlet logo = document.createElement('img')\r\nlogo.setAttribute('id', 'logo')\r\nlogo.src = _images_webpack_logo_gif__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\r\n\r\nlet root = document.getElementById('root');\r\n\r\n\r\n    let mainDiv = document.createElement('div');\r\n    mainDiv.setAttribute('id', 'mainDiv');\r\n\r\n    let inputField = document.createElement('input');\r\n    inputField.setAttribute('id', 'inputField');\r\n\r\n    let label = document.createElement('label');\r\n    label.setAttribute('for', 'inputField');\r\n    label.innerText = 'Note: ';\r\n\r\n    let submitBtn = document.createElement('button');\r\n    submitBtn.innerText = 'SUBMIT';\r\n\r\n    let resetBtn = document.createElement('button');\r\n    resetBtn.innerText = 'RESET';\r\n\r\nmainDiv.append(logo, label, inputField, submitBtn, resetBtn);\r\n\r\nlet notesDiv = document.createElement('div');\r\nnotesDiv.setAttribute('id', 'notesDiv');\r\n\r\nsubmitBtn.addEventListener('click', () => {\r\n    let note = document.createElement('h2');\r\n    note.innerText = inputField.value;\r\n\r\n    notesDiv.append(note);\r\n    inputField.value = null;\r\n    inputField.focus();\r\n});\r\n\r\nresetBtn.addEventListener('click', () => {\r\n    notesDiv.innerHTML = null;\r\n    inputField.value = null;\r\n    inputField.focus();\r\n});\r\n\r\nroot.append(mainDiv, notesDiv);\r\n\n\n//# sourceURL=webpack://webpack2/./src/index.js?");
 
 /***/ })
 

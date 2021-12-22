@@ -1,3 +1,4 @@
+import webpackLogo from './images/webpack-logo.gif';
 import('./index.css');
 
 /* 
@@ -9,7 +10,12 @@ final output should work with bundled code from build folder
 
 */
 
+let logo = document.createElement('img')
+logo.setAttribute('id', 'logo')
+logo.src = webpackLogo;
+
 let root = document.getElementById('root');
+
 
     let mainDiv = document.createElement('div');
     mainDiv.setAttribute('id', 'mainDiv');
@@ -27,7 +33,7 @@ let root = document.getElementById('root');
     let resetBtn = document.createElement('button');
     resetBtn.innerText = 'RESET';
 
-mainDiv.append(label, inputField, submitBtn, resetBtn);
+mainDiv.append(logo, label, inputField, submitBtn, resetBtn);
 
 let notesDiv = document.createElement('div');
 notesDiv.setAttribute('id', 'notesDiv');

@@ -11,6 +11,10 @@ body {
     padding: 5%;
 }
 
+#logo {
+    width: 50px;
+}
+
 #mainDiv {
     width: 400px;
     margin: auto;
@@ -18,6 +22,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+#inputField {
+    font-size: 15px;
 }
 
 #notesDiv {
