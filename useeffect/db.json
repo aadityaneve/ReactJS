@@ -1,0 +1,59 @@
+{
+  "todos": [
+    {
+      "title": "Learn React",
+      "status": false,
+      "id": 1
+    },
+    {
+      "title": "Learn Vue",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "Learn Web-Socket",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "Learn TypeScript",
+      "status": false,
+      "id": 4
+    },
+    {
+      "title": "Learn NextJS",
+      "status": false,
+      "id": 5
+    },
+    {
+      "title": "Learn React-Native",
+      "status": false,
+      "id": 6
+    },
+    {
+      "title": "Learn JS",
+      "status": false,
+      "id": 7
+    },
+    {
+      "title": "Learn Cooking",
+      "status": false,
+      "id": 8
+    },
+    {
+      "title": "Learn Excel",
+      "status": false,
+      "id": 9
+    },
+    {
+      "title": "Learn Computer",
+      "status": false,
+      "id": 10
+    },
+    {
+      "title": "Learn HTMl",
+      "status": false,
+      "id": 11
+    }
+  ]
+}
