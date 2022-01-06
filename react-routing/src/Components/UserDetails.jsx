@@ -1,14 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect,  useContext } from 'react';
+import { useParams, Navigate } from 'react-router-dom';
+
+import { AuthContext } from '../Contexts/AuthContext';
 
 const UserDetails = () => {
     const [user, setUser] = useState({});
 
     const { id } = useParams();
 
+    const { token } = useContext(AuthContext);
+
     useEffect(() => {
         getData();
-    }, []);
+    }, [id]);
 
     const getData = () => {
         fetch(`https://reqres.in/api/users/${id}`, {
@@ -20,8 +24,13 @@ const UserDetails = () => {
             })
             .then((response) => {
                 setUser(response.data);
+                console.log('response.data:', response.data)
             });
     };
+
+    if (!token) {
+        return <Navigate to={'/login'} />;
+    }
 
     return (
         <div>
