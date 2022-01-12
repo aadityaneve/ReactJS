@@ -15,14 +15,6 @@ const init = {
 
 export const reducer = (state = init, { type, payload }) => {
     switch (type) {
-        /* case REMOVE_TODO:
-            return {
-                ...state,
-                todos: state.todos.filter((todo) =>
-                    todo.id !== payload.id ? todo : null
-                ),
-            }; */
-
         case ADD_TODO_LOADING:
             return {
                 ...state,
