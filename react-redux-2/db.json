@@ -59,6 +59,26 @@
       "title": "Learn Exercise",
       "status": false,
       "id": 12
+    },
+    {
+      "title": "Learn Something",
+      "status": false,
+      "id": 13
+    },
+    {
+      "title": "Learn Something New",
+      "status": false,
+      "id": 14
+    },
+    {
+      "title": "Learn Something New",
+      "status": false,
+      "id": 15
+    },
+    {
+      "title": "Do Something",
+      "status": false,
+      "id": 16
     }
   ]
 }

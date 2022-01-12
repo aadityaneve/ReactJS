@@ -1,8 +1,4 @@
 import {
-    ADD_TODO,
-    REMOVE_TODO,
-    INC_COUNTER,
-    DEC_COUNTER,
     ADD_TODO_LOADING,
     ADD_TODO_SUCCESS,
     ADD_TODO_ERROR,
@@ -19,31 +15,13 @@ const init = {
 
 export const reducer = (state = init, { type, payload }) => {
     switch (type) {
-        case ADD_TODO:
-            return {
-                ...state,
-                todos: [...state.todos, payload],
-            };
-
-        case REMOVE_TODO:
+        /* case REMOVE_TODO:
             return {
                 ...state,
                 todos: state.todos.filter((todo) =>
                     todo.id !== payload.id ? todo : null
                 ),
-            };
-
-        case INC_COUNTER:
-            return {
-                ...state,
-                counter: state.counter + 1,
-            };
-
-        case DEC_COUNTER:
-            return {
-                ...state,
-                counter: state.counter - 1,
-            };
+            }; */
 
         case ADD_TODO_LOADING:
             return {

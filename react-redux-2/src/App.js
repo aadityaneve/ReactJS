@@ -1,21 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { incCounter, decCounter } from './Store/actions';
-import Todos from './Components/Todos';
+import { incCounter, decCounter } from './features/Todos/actions';
+import Todos from './components/Todos';
+import Counter from './components/Counter';
 
 function App() {
-    /* const state = useSelector((state) => state);
-    console.log('state:', state) */
-
     return (
         <div className='App'>
-            {/* Todos */}
+            <Counter />
+
             <div>
                 <Todos />
             </div>
-            {/* Todos */}
         </div>
     );
 }

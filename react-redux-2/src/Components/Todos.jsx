@@ -2,26 +2,18 @@ import React, { useState, useEffect } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 import {
-    addTodo,
-    removeTodo,
     addTodoLoading,
     addTodoSuccess,
     addTodoError,
     getTodoLoading,
     getTodoSuccess,
     getTodoError,
-} from '../Store/actions';
+} from '../features/Todos/actions';
 
 const Todos = () => {
     const [text, setText] = useState('');
-    /* const state = useSelector((state) => state);
-    console.log('state:', state) */
 
-    const { loading, todos: todoss, error } = useSelector((state) => state);
-    const todos = todoss[0];
-    /* console.log('loading:', loading);
-    console.log('todos:', todos);
-    console.log('error:', error); */
+    const { loading, todos, error } = useSelector((state) => state.todoState);
 
     const dispatch = useDispatch();
 
@@ -37,11 +29,15 @@ const Todos = () => {
             );
             dispatch(getTodoSuccess(data));
         } catch (error) {
-            dispatch(getTodoError());
+            dispatch(getTodoError(error));
         }
     }
 
-    return (
+    return loading ? (
+        <h3>Loading....</h3>
+    ) : error ? (
+        <h3>Something Went Wrong</h3>
+    ) : (
         <div>
             <input
                 onChange={(e) => setText(e.target.value)}
@@ -62,19 +58,15 @@ const Todos = () => {
                         .then((response) => response.json())
                         .then((response) => {
                             dispatch(addTodoSuccess(response));
-                            console.log('response:', response);
                             getTodos();
                         })
                         .catch((error) => dispatch(addTodoError(error)));
-
-                    getTodos();
-                    // dispatch(addTodo(text))
                 }}
             >
                 Add Todo
             </button>
             <div>
-                {todos?.map((todo) => (
+                {todos[0]?.map((todo) => (
                     <h4 key={todo.id}>
                         {todo.title} - {String(todo.status)}
                     </h4>

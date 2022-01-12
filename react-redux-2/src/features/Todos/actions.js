@@ -1,8 +1,4 @@
 import {
-    ADD_TODO,
-    REMOVE_TODO,
-    INC_COUNTER,
-    DEC_COUNTER,
     ADD_TODO_LOADING,
     ADD_TODO_SUCCESS,
     ADD_TODO_ERROR,
@@ -11,15 +7,6 @@ import {
     GET_TODO_ERROR,
 } from './actionTypes';
 
-export const addTodo = (data) => ({
-    type: ADD_TODO,
-    payload: data,
-});
-
-export const removeTodo = (id) => ({
-    type: REMOVE_TODO,
-    payload: id,
-});
 
 export const addTodoLoading = () => {
     return {
@@ -60,13 +47,3 @@ export const getTodoError = (error) => {
         payload: error,
     };
 };
-
-export const incCounter = (data) => ({
-    type: INC_COUNTER,
-    payload: data,
-});
-
-export const decCounter = (data) => ({
-    type: DEC_COUNTER,
-    payload: data,
-});
