@@ -7,6 +7,17 @@ import {
     GET_TODO_ERROR,
 } from './actionTypes';
 
+export const getData = () => (dispatch) => {
+    dispatch(getTodoLoading());
+    fetch('http://localhost:3001/todos')
+        .then((response) => response.json())
+        .then((data) => {
+            dispatch(getTodoSuccess(data));
+        })
+        .catch((error) => {
+            dispatch(getTodoError(error));
+        });
+};
 
 export const addTodoLoading = () => {
     return {

@@ -5,6 +5,7 @@ import {
     addTodoLoading,
     addTodoSuccess,
     addTodoError,
+    getData,
     getTodoLoading,
     getTodoSuccess,
     getTodoError,
@@ -22,7 +23,9 @@ const Todos = () => {
     }, []);
 
     async function getTodos() {
-        try {
+        dispatch(getData());
+
+        /* try {
             dispatch(getTodoLoading());
             const data = await fetch('http://localhost:3001/todos').then(
                 (response) => response.json()
@@ -30,7 +33,7 @@ const Todos = () => {
             dispatch(getTodoSuccess(data));
         } catch (error) {
             dispatch(getTodoError(error));
-        }
+        } */
     }
 
     return loading ? (
