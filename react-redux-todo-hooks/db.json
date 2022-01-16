@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "title": "Learn React-Redux",
+      "status": true,
+      "id": 5
+    },
+    {
+      "title": "Learn React-Router-Dom",
+      "status": true,
+      "id": 6
+    },
+    {
+      "title": "Learn CSS",
+      "status": true,
+      "id": 7
+    },
+    {
+      "title": "Learn NextJs",
+      "status": true,
+      "id": 9
+    },
+    {
+      "title": "Learn TypeScript",
+      "status": true,
+      "id": 10
+    },
+    {
+      "title": "Learn Time Management",
+      "status": true,
+      "id": 11
+    }
+  ]
+}
