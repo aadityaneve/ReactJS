@@ -27,13 +27,18 @@
     },
     {
       "title": "Learn Time Management",
-      "status": true,
+      "status": false,
       "id": 11
     },
     {
       "title": "Get Awesome JOB",
-      "status": false,
+      "status": true,
       "id": 12
+    },
+    {
+      "title": "Learn DSA",
+      "status": true,
+      "id": 13
     }
   ]
 }
