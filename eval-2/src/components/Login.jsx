@@ -27,7 +27,7 @@ const Login = () => {
             <Button
                 onClick={() => {
                     dispatch(reqresAuth());
-                    return authToken ? navigate(`/user`) : null ;
+                    navigate(`/user`);
                 }}
                 variant='contained'
                 color='success'
@@ -37,7 +37,7 @@ const Login = () => {
             <Button
                 onClick={() => {
                     dispatch(reqresAuth());
-                    return authToken ? navigate(`/admin`) : null ;
+                    navigate(`/admin`);
                 }}
                 variant='contained'
                 color='success'

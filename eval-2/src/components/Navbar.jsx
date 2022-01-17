@@ -6,8 +6,13 @@ import { useNavigate } from 'react-router-dom';
 
 import Login from '../components/Login';
 import Register from '../components/Register';
+import { useSelector, useDispatch } from 'react-redux';
+import { deleteTokenFromLocalStorage } from '../features/action';
 
 const Navbar = () => {
+    const { authToken } = useSelector((state) => state);
+    const dispatch = useDispatch();
+
     const navigate = useNavigate();
 
     const navbarStyle = {
@@ -27,20 +32,38 @@ const Navbar = () => {
             >
                 HOME
             </Typography>
-            <Typography
-                onClick={() => navigate(`/login`)}
-                variant='h6'
-                component='h6'
-            >
-                LOGIN
-            </Typography>
-            <Typography
-                onClick={() => navigate(`/register`)}
-                variant='h6'
-                component='h6'
-            >
-                REGISTER
-            </Typography>
+            {!authToken ? (
+                <Typography
+                    onClick={() => navigate(`/login`)}
+                    variant='h6'
+                    component='h6'
+                >
+                    LOGIN
+                </Typography>
+            ) : null}
+
+            {!authToken ? (
+                <Typography
+                    onClick={() => navigate(`/register`)}
+                    variant='h6'
+                    component='h6'
+                >
+                    REGISTER
+                </Typography>
+            ) : null}
+
+            {authToken ? (
+                <Typography
+                    onClick={() => {
+                        dispatch(deleteTokenFromLocalStorage());
+                        navigate(`/`);
+                    }}
+                    variant='h6'
+                    component='h6'
+                >
+                    LOGOUT
+                </Typography>
+            ) : null}
         </Box>
     );
 };

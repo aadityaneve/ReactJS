@@ -7,7 +7,8 @@ import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Admin from './components/Admin';
 import Register from './components/Register';
-import User from './components/User'
+import User from './components/User';
+import Home from './components/Home';
 import { useSelector, useDispatch } from 'react-redux';
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
         <div className='App'>
             <Navbar />
             <Routes>
-                <Route path='/' element={<Login />}></Route>
+                <Route path='/' element={<Home />}></Route>
                 <Route
                     path='/user'
                     element={authToken ? <User /> : <Login />}

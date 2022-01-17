@@ -1,44 +1,56 @@
 {
-  "jobs": [
-    {
-      "id": 1,
-      "company_name": "Meesho",
-      "job_title": "Front End",
-      "salary": "10",
-      "range": "10-15",
-      "job_desc": "Well Experienced Full Stack Web Developer",
-      "location": "Banglore",
-      "job_type": "Remote"
-    },
-    {
-      "id": 2,
-      "company_name": "Paytm",
-      "job_title": "Front End",
-      "salary": "11",
-      "range": "11-15",
-      "job_desc": "Well Experienced Full Stack Web Developer",
-      "location": "Banglore",
-      "job_type": "Remote"
-    },
-    {
-      "id": 3,
-      "company_name": "Uber",
-      "job_title": "Front End",
-      "salary": "18",
-      "range": "18-25",
-      "job_desc": "Well Experienced Full Stack Web Developer",
-      "location": "Banglore",
-      "job_type": "Remote"
-    },
-    {
-      "company_name": "OLA",
-      "job_title": "Front End",
-      "salary": "25",
-      "range": "25-30",
-      "job_desc": "Remote",
-      "location": "Pune",
-      "job_type": "WFH",
-      "id": 4
-    }
-  ]
+    "jobs": [
+        {
+            "id": 1,
+            "company_name": "Meesho",
+            "job_title": "Front End",
+            "salary": "10",
+            "range": "10-15",
+            "job_desc": "Well Experienced Full Stack Web Developer",
+            "location": "Banglore",
+            "job_type": "Remote"
+        },
+        {
+            "id": 2,
+            "company_name": "Paytm",
+            "job_title": "Front End",
+            "salary": "11",
+            "range": "11-15",
+            "job_desc": "Well Experienced Full Stack Web Developer",
+            "location": "Banglore",
+            "job_type": "Remote"
+        },
+        {
+            "id": 3,
+            "company_name": "Uber",
+            "job_title": "Front End",
+            "salary": "18",
+            "range": "18-25",
+            "job_desc": "Well Experienced Full Stack Web Developer",
+            "location": "Banglore",
+            "job_type": "Remote"
+        },
+        {
+            "company_name": "OLA",
+            "job_title": "Front End",
+            "salary": "25",
+            "range": "25-30",
+            "job_desc": "Remote",
+            "location": "Pune",
+            "job_type": "WFH",
+            "id": 4
+        }
+    ],
+    "applied_jobs": [
+        {
+            "id": 2,
+            "company_name": "Paytm",
+            "job_title": "Front End",
+            "salary": "11",
+            "range": "11-15",
+            "job_desc": "Well Experienced Full Stack Web Developer",
+            "location": "Banglore",
+            "job_type": "Remote"
+        }
+    ]
 }

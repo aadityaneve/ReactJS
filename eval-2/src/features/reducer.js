@@ -4,11 +4,13 @@ import {
     GET_JOBS,
     SORT_ASC,
     SORT_DEC,
+    APPLIED_JOBS
 } from './actionTypes';
 
 const init = {
     authToken: '',
     jobs: [],
+    appliedJobs: [],
 };
 
 export const reducer = (state = init, { type, payload }) => {
@@ -29,6 +31,12 @@ export const reducer = (state = init, { type, payload }) => {
             return {
                 ...state,
                 jobs: payload,
+            };
+
+        case APPLIED_JOBS:
+            return {
+                ...state,
+                appliedJobs: payload,
             };
 
         case SORT_ASC:

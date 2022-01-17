@@ -1,13 +1,17 @@
 import { Box, Button, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 
-import { fetchJobs, sortAsc, sortDec } from '../features/action';
+import {
+    fetchJobs,
+    sortAsc,
+    sortDec,
+    appliedJob,
+} from '../features/action';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 const User = () => {
-    const { jobs } = useSelector((state) => state);
-    console.log('jobs:', jobs);
+    const { jobs, appliedJobs } = useSelector((state) => state);
 
     useEffect(() => {
         dispatch(fetchJobs());
@@ -46,7 +50,14 @@ const User = () => {
                 return (
                     <h5 key={job.id}>
                         {job.company_name} | {job.job_title} | {job.salary} LPA
-                        | {job.location} | {job.job_type} | {job.range} RANGE
+                        | {job.location} | {job.job_type} | {job.range} RANGE{' '}
+                        <Button
+                            onClick={() => dispatch(appliedJob(job))}
+                            variant='outlined'
+                            color='primary'
+                        >
+                            APPLY
+                        </Button>
                     </h5>
                 );
             })}

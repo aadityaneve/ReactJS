@@ -1,4 +1,11 @@
-import { REQRES_AUTH, SET_JOB, GET_JOBS, SORT_ASC, SORT_DEC } from './actionTypes';
+import {
+    REQRES_AUTH,
+    SET_JOB,
+    GET_JOBS,
+    SORT_ASC,
+    SORT_DEC,
+    APPLIED_JOBS,
+} from './actionTypes';
 
 import axios from 'axios';
 
@@ -60,6 +67,30 @@ export const reqresAuth = () => (dispatch) => {
         });
 };
 
+export const appliedJob = (job) => (dispatch) => {
+    axios
+        .post(`http://localhost:3001/applied_jobs`, job)
+        .then((response) => {
+            dispatch(applyJob(response.data));
+            console.log('response.data:', response.data);
+        })
+        .catch((error) => {
+            console.log(error.message);
+        });
+};
+
+export const getAppliedJobs = (job) => (dispatch) => {
+    axios
+        .get(`http://localhost:3001/applied_jobs`)
+        .then((response) => {
+            dispatch(applyJob(response.data));
+            console.log('response.data:', response.data);
+        })
+        .catch((error) => {
+            console.log(error.message);
+        });
+};
+
 export const addRequresAuth = (token) => {
     return {
         type: REQRES_AUTH,
@@ -77,6 +108,13 @@ export const getJobs = (data) => {
 export const setJob = (data) => {
     return {
         type: SET_JOB,
+        payload: data,
+    };
+};
+
+export const applyJob = (data) => {
+    return {
+        type: APPLIED_JOBS,
         payload: data,
     };
 };
