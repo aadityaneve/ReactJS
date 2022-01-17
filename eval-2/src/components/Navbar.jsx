@@ -26,6 +26,7 @@ const Navbar = () => {
     return (
         <Box sx={navbarStyle}>
             <Typography
+                style={{ cursor: 'pointer' }}
                 onClick={() => navigate(`/`)}
                 variant='h6'
                 component='h6'
@@ -34,6 +35,7 @@ const Navbar = () => {
             </Typography>
             {!authToken ? (
                 <Typography
+                    style={{ cursor: 'pointer' }}
                     onClick={() => navigate(`/login`)}
                     variant='h6'
                     component='h6'
@@ -44,6 +46,7 @@ const Navbar = () => {
 
             {!authToken ? (
                 <Typography
+                    style={{ cursor: 'pointer' }}
                     onClick={() => navigate(`/register`)}
                     variant='h6'
                     component='h6'
@@ -54,6 +57,7 @@ const Navbar = () => {
 
             {authToken ? (
                 <Typography
+                    style={{ cursor: 'pointer' }}
                     onClick={() => {
                         dispatch(deleteTokenFromLocalStorage());
                         navigate(`/`);
