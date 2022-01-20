@@ -2,7 +2,7 @@
   "todos": [
     {
       "title": "Learn React-Redux",
-      "status": true,
+      "status": false,
       "id": 5
     },
     {
@@ -12,7 +12,7 @@
     },
     {
       "title": "Learn CSS",
-      "status": true,
+      "status": false,
       "id": 7
     },
     {
@@ -39,6 +39,11 @@
       "title": "Learn DSA",
       "status": true,
       "id": 13
+    },
+    {
+      "title": "Learn DSA2",
+      "status": false,
+      "id": 14
     }
   ]
 }
