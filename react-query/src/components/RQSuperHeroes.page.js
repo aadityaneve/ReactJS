@@ -8,8 +8,13 @@ const fetchSuperHeroes = () => {
 }
 
 const RQSuperHeroesPage = () => {
-
-    const { isLoading, data, isError, error } = useQuery('super-heroes', fetchSuperHeroes);
+    // Query cache has default time for 5 minutes
+    // We can change the cache time by passing an object to use query hook
+    const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes, {
+        cacheTime: 5000,
+    });
+    console.log("🚀 ~ file: RQSuperHeroes.page.js ~ line 13 ~ RQSuperHeroesPage ~ isLoading", isLoading)
+    console.log("🚀 ~ file: RQSuperHeroes.page.js ~ line 13 ~ RQSuperHeroesPage ~ isFetching", isFetching)
 
     if (isLoading) {
         return <h2>Loading....</h2>
