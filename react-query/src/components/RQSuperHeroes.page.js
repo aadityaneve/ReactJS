@@ -12,10 +12,17 @@ const RQSuperHeroesPage = () => {
     // We can change the cache time by passing an object to use query hook
     const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes, {
         cacheTime: 5000,
-        staleTime: 5000
+        staleTime: 5000,
+
+        refetchOnMount: true,       // Will refetch data when component is mounted && if the data is stale.
+        // refetchOnMount: false    // Will not refetch data when component is mounted.
+        // refetchOnMount: 'always' // The query will always refetch on mount.
+
+        refetchOnWindowFocus: true,     // The query will refetch on window focus if the data is stale.
+        // refetchOnWindowFocus: false,    // The query will not refetch on window focus.
+        // refetchOnWindowFocus: 'always', // The query will always refetch on window focus.
     });
-    console.log("🚀 ~ file: RQSuperHeroes.page.js ~ line 13 ~ RQSuperHeroesPage ~ isLoading", isLoading)
-    console.log("🚀 ~ file: RQSuperHeroes.page.js ~ line 13 ~ RQSuperHeroesPage ~ isFetching", isFetching)
+    console.log({ isLoading, isFetching })
 
     if (isLoading) {
         return <h2>Loading....</h2>
