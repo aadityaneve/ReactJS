@@ -21,6 +21,10 @@ const RQSuperHeroesPage = () => {
         refetchOnWindowFocus: true,     // The query will refetch on window focus if the data is stale.
         // refetchOnWindowFocus: false,    // The query will not refetch on window focus.
         // refetchOnWindowFocus: 'always', // The query will always refetch on window focus.
+
+        // refetchInterval: false, // default
+        refetchInterval: 2000,  // Will fetch data after every 2 seconds.
+        // refetchIntervalInBackground: true, // Will fetch data in background even the browser is not in focus.
     });
     console.log({ isLoading, isFetching })
 
