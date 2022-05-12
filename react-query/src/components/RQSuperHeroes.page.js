@@ -10,7 +10,7 @@ const fetchSuperHeroes = () => {
 const RQSuperHeroesPage = () => {
     // Query cache has default time for 5 minutes
     // We can change the cache time by passing an object to use query hook
-    const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes, {
+    const { isLoading, data, isError, error, isFetching, refetch } = useQuery('super-heroes', fetchSuperHeroes, {
         cacheTime: 5000,
         staleTime: 5000,
 
@@ -25,6 +25,8 @@ const RQSuperHeroesPage = () => {
         // refetchInterval: false, // default
         refetchInterval: 2000,  // Will fetch data after every 2 seconds.
         // refetchIntervalInBackground: true, // Will fetch data in background even the browser is not in focus.
+
+        enabled: false, // Set to false to disable this query from automatically running.
     });
     console.log({ isLoading, isFetching })
 
@@ -39,6 +41,7 @@ const RQSuperHeroesPage = () => {
     return (
         <>
             <h2>RQ Super Heroes Page</h2>
+            <button onClick={refetch}>Fetch Heroes</button>
             {
                 data?.data.map((hero) => {
                     return <div key={hero.name}>{hero.name}</div>
