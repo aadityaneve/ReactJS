@@ -8,6 +8,15 @@ const fetchSuperHeroes = () => {
 }
 
 const RQSuperHeroesPage = () => {
+
+    const onSuccess = (data) => {
+        console.log('Perform side effect after data fetching.', data)
+    }
+
+    const onError = (error) => {
+        console.log('Perform side effect after encountered error.', error)
+    }
+
     // Query cache has default time for 5 minutes
     // We can change the cache time by passing an object to use query hook
     const { isLoading, data, isError, error, isFetching, refetch } = useQuery('super-heroes', fetchSuperHeroes, {
@@ -27,6 +36,9 @@ const RQSuperHeroesPage = () => {
         // refetchIntervalInBackground: true, // Will fetch data in background even the browser is not in focus.
 
         enabled: false, // Set to false to disable this query from automatically running.
+
+        onSuccess: onSuccess,
+        onError: onError,
     });
     console.log({ isLoading, isFetching })
 
