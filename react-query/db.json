@@ -39,6 +39,11 @@
       "name": "Aquaman",
       "alterEgo": "Arthur Curry",
       "id": 8
+    },
+    {
+      "name": "GHI",
+      "alterEgo": "JKL",
+      "id": 9
     }
   ],
   "friends": [
